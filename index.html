@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A student project to learn about responsible electronic waste collection and recycling.">
+  <title>E-Waste Management</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav container" aria-label="Main navigation">
+      <a class="brand" href="#home"><span class="brand-icon">♻</span> E-Waste<span>Care</span></a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+      <div class="nav-links" id="navLinks">
+        <a href="#home">Home</a><a href="#about">About</a><a href="#items">Accepted Items</a><a href="#request">Pickup Request</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow">MAKE TECHNOLOGY SUSTAINABLE</p>
+          <h1>Give your old electronics a <span>better future.</span></h1>
+          <p class="hero-copy">Dispose of electronic waste responsibly. Learn what can be recycled and submit a sample pickup request through this student project.</p>
+          <a class="button button-light" href="#request">Request a Pickup <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="hero-art" aria-label="Recycle symbol illustration" role="img">
+          <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+          <div class="device device-phone">▯</div><div class="device device-laptop">▱</div>
+          <div class="recycle-mark">♻</div>
+          <div class="floating-dot dot-one"></div><div class="floating-dot dot-two"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats container" aria-label="Project highlights">
+      <article class="stat"><strong>3R</strong><span>Reduce · Reuse · Recycle</span></article>
+      <article class="stat"><strong>6+</strong><span>Types of accepted items</span></article>
+      <article class="stat"><strong>1 Planet</strong><span>Let's protect it together</span></article>
+    </section>
+
+    <section class="section container" id="about">
+      <div class="section-heading">
+        <p class="eyebrow">WHY IT MATTERS</p><h2>Small actions, cleaner future.</h2>
+        <p>Electronic waste can contain materials that need careful handling. Reuse working devices and use authorized collection or recycling services for items that are no longer useful.</p>
+      </div>
+      <div class="feature-grid">
+        <article class="feature-card"><div class="feature-icon">🌱</div><h3>Protect Nature</h3><p>Keep old electronics out of ordinary household waste streams.</p></article>
+        <article class="feature-card"><div class="feature-icon">🔧</div><h3>Reuse Devices</h3><p>Repair or donate usable electronics when it is safe and practical.</p></article>
+        <article class="feature-card"><div class="feature-icon">🔋</div><h3>Handle Safely</h3><p>Do not dismantle batteries or damaged electronic equipment yourself.</p></article>
+      </div>
+    </section>
+
+    <section class="section items-section" id="items">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">WHAT CAN BE COLLECTED?</p><h2>Common e-waste items</h2>
+          <p>This is an educational list. Confirm acceptance with an authorized local collection centre.</p>
+        </div>
+        <div class="items-grid">
+          <article class="item-card"><span>📱</span><h3>Mobile Phones</h3><p>Old phones and accessories</p></article>
+          <article class="item-card"><span>💻</span><h3>Computers</h3><p>Laptops, desktops and parts</p></article>
+          <article class="item-card"><span>🔌</span><h3>Cables</h3><p>Chargers, wires and adapters</p></article>
+          <article class="item-card"><span>⌨️</span><h3>Peripherals</h3><p>Keyboards, mice and speakers</p></article>
+          <article class="item-card"><span>🔋</span><h3>Batteries</h3><p>Take to a suitable collection point</p></article>
+          <article class="item-card"><span>🖨️</span><h3>Printers</h3><p>Printers and small office devices</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container" id="request">
+      <div class="request-grid">
+        <div class="request-info">
+          <p class="eyebrow">GET STARTED</p><h2>Pickup request demo</h2>
+          <p>Fill in the form to see how a collection request interface works. This demo runs in your browser and does not send information to a server.</p>
+          <div class="notice"><strong>Privacy note</strong><p>Use sample details only. The form is not connected to a real collection service.</p></div>
+        </div>
+        <form class="request-form" id="pickupForm">
+          <label for="fullName">Full name</label><input id="fullName" name="fullName" type="text" placeholder="Enter your name" required minlength="2">
+          <label for="email">Email address</label><input id="email" name="email" type="email" placeholder="you@example.com" required>
+          <label for="itemType">E-waste type</label>
+          <select id="itemType" name="itemType" required>
+            <option value="">Choose an item</option><option>Mobile phone</option><option>Laptop / computer</option><option>Cables / chargers</option><option>Battery</option><option>Printer</option><option>Other electronics</option>
+          </select>
+          <label for="quantity">Approximate quantity</label><input id="quantity" name="quantity" type="number" min="1" max="100" value="1" required>
+          <label for="message">Additional details (optional)</label><textarea id="message" name="message" rows="3" placeholder="Add a short note"></textarea>
+          <button class="button button-primary" type="submit">Submit Demo Request <span aria-hidden="true">→</span></button>
+          <p id="formMessage" class="form-message" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner"><a class="brand footer-brand" href="#home">♻ E-Waste<span>Care</span></a><p>Student project · Built with HTML, CSS and JavaScript</p><p>© <span id="year"></span> E-WasteCare</p></div>
+  </footer>
+  <script src="js/script.js"></script>
+</body>
+</html>
